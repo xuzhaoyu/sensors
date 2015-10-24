@@ -74,14 +74,39 @@ Route::post('/command/data', array(
     'uses' => 'CommandController@postForm'
 ));
 
-Route::post('/phone/data', array(
-    'as' => 'phoneData',
-    'uses' => 'PhoneController@postData'
+Route::post('/exhaust/reading', array(
+    'as' => 'exdata',
+    'uses' => 'ExhaustController@postReading'
 ));
 
-Route::get('/phone/number', array(
-    'as' => 'phoneNumber',
-    'uses' => 'PhoneController@getNumber'
+Route::get('/exhaust/index', array(
+    'as' => 'exhaustIndex',
+    'uses' => 'ExhaustController@getIndex'
+));
+
+Route::get('/exhaust/set_room', array(
+    'as' => 'room_form',
+    'uses' => 'ExhaustController@getForm'
+));
+
+Route::get('/exhaust/graph/{mac}/{time_length}', array(
+    'as' => 'exhaustGraph',
+    'uses' => 'ExhaustController@getGraph'
+));
+
+Route::get('/exhaust/rooms', array(
+    'as' => 'exhaustRooms',
+    'uses' => 'ExhaustController@getRooms'
+));
+
+Route::post('/exhaust/room_name', array(
+    'as' => 'room_name',
+    'uses' => 'ExhaustController@postRoom'
+));
+
+Route::get('/exhaust/delete/{mac}', array(
+    'as' => 'exhaustDelete',
+    'uses' => 'ExhaustController@getDelete'
 ));
 
 Route::group(array('before' => 'auth'), function(){
@@ -92,7 +117,6 @@ Route::group(array('before' => 'auth'), function(){
             'as' => 'variable',
             'uses' => 'ReadingsController@postVariable'
         ));
-
 
         Route::post('/account/phonechange', array(
             'as' => 'account-phone-post',
