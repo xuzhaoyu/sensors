@@ -35,7 +35,7 @@
         <tr>
             <th>房间</th>
             <th>CO</th>
-            <th>NO</th>
+            <th>NO2</th>
             <th>SO2</th>
             <th>LEL</th>
             <th>Dust</th>
@@ -215,7 +215,7 @@
                             show: true
                         },
                         legend: {
-                            data: ['NO1'],
+                            data: ['NO2'],
                             textStyle: {
                                 fontSize: 24
                             }
@@ -238,7 +238,7 @@
                             {
                                 type: 'value',
                                 axisLabel: {
-                                    formatter: '{value} NO1',
+                                    formatter: '{value} NO2',
                                     textStyle: {
                                         fontWeight: 'bolder'
                                     }
@@ -246,7 +246,7 @@
                             }],
                         series: [
                             {
-                                "name": "NO1",
+                                "name": "NO2",
                                 "type": "bar",
                                 "barWidth": 50,
                                 "itemStyle": {normal: {color: '#1e90ff'}},

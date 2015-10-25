@@ -112,7 +112,7 @@ header("refresh:120;");
                         show: true
                     },
                     legend: {
-                        data: ['NO1'],
+                        data: ['NO2'],
                         textStyle: {
                             fontSize: 24
                         }
@@ -135,13 +135,13 @@ header("refresh:120;");
                         {
                             type: 'value',
                             axisLabel: {
-                                formatter: '{value} NO1'
+                                formatter: '{value} NO2'
                             }
                         }
                     ],
                     series: [
                         {
-                            "name": "NO1",
+                            "name": "NO2",
                             "type": "line",
                             "itemStyle": {normal: {color: '#1e90ff'}},
                             "data": [
